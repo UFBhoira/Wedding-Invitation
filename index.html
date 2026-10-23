@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -41,7 +40,7 @@
       display: grid;
       place-items: center;
       text-align: center;
-      padding: 58px 20px;
+      padding: 75px 20px 58px;
       color: var(--white);
       position: relative;
       overflow: hidden;
@@ -85,7 +84,7 @@
     }
 
     h1 {
-      font-family: "Cormorant Garamond", "Amiri", serif;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 500;
       font-size: clamp(3.7rem,10vw,7rem);
       line-height: .98;
@@ -96,7 +95,6 @@
 
     .ampersand {
       color: var(--gold);
-      font-family: "Cormorant Garamond", serif;
       font-style: italic;
       font-weight: 400;
       padding: 0 .08em;
@@ -134,26 +132,39 @@
       transform: translateY(-2px);
     }
 
-    .button.outline {
-      color: var(--white);
-      background: transparent;
-    }
-
     .language-switch {
       position: absolute;
-      top: 18px;
-      right: 18px;
-      z-index: 3;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+      width: 46px;
+      height: 46px;
       border: 1px solid var(--gold);
-      color: #fff8e9;
-      background: rgba(10,42,34,.45);
-      padding: 9px 15px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #f0d79e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-      border-radius: 3px;
-      font: 600 .95rem "DM Sans", sans-serif;
+      font: 700 19px "DM Sans", sans-serif;
+      box-shadow: 0 3px 12px rgba(0,0,0,.18);
+      transition: background .2s, transform .2s;
     }
 
-    html[dir="rtl"] body { font-family: "Amiri", serif; }
+    .language-switch:hover {
+      background: var(--green2);
+      transform: scale(1.06);
+    }
+
+    html[dir="rtl"] .language-switch {
+      right: auto;
+      left: 20px;
+    }
+
+    html[dir="rtl"] body {
+      font-family: "Amiri", serif;
+    }
 
     html[dir="rtl"] h1,
     html[dir="rtl"] .section-title,
@@ -172,18 +183,21 @@
       font-size: clamp(2.3rem,5vw,3.2rem);
     }
 
-    html[dir="rtl"] .event-card h3 { font-size: 2rem; }
-
-    html[dir="rtl"] .language-switch {
-      right: auto;
-      left: 18px;
-      font-family: "DM Sans", sans-serif;
+    html[dir="rtl"] .event-card h3 {
+      font-size: 2rem;
     }
 
-    html[dir="rtl"] .eyebrow { letter-spacing: 0; }
-    html[dir="rtl"] .timebox span { letter-spacing: 0; }
+    html[dir="rtl"] .eyebrow {
+      letter-spacing: 0;
+    }
 
-    section { padding: 70px 20px; }
+    html[dir="rtl"] .timebox span {
+      letter-spacing: 0;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
 
     .section-inner {
       max-width: 1000px;
@@ -193,7 +207,7 @@
     .section-title {
       text-align: center;
       margin: 0 0 12px;
-      font: 500 clamp(2.7rem,5.5vw,3.8rem)/1.05 "Cormorant Garamond", "Amiri", serif;
+      font: 500 clamp(2.7rem,5.5vw,3.8rem)/1.05 "Cormorant Garamond", serif;
       letter-spacing: .015em;
       color: var(--green);
     }
@@ -212,7 +226,9 @@
       margin: 12px 0 24px;
     }
 
-    .welcome { text-align: center; }
+    .welcome {
+      text-align: center;
+    }
 
     .welcome .arabic {
       font: 2rem "Amiri", serif;
@@ -224,7 +240,9 @@
       color: var(--white);
     }
 
-    .countdown-wrap .section-title { color: var(--white); }
+    .countdown-wrap .section-title {
+      color: var(--white);
+    }
 
     .countdown {
       display: grid;
@@ -277,12 +295,14 @@
     }
 
     .event-card h3 {
-      font: 500 2.35rem/1.05 "Cormorant Garamond", "Amiri", serif;
+      font: 500 2.35rem/1.05 "Cormorant Garamond", serif;
       color: var(--green);
       margin: 10px 0 14px;
     }
 
-    .event-card p { margin: 5px 0; }
+    .event-card p {
+      margin: 5px 0;
+    }
 
     .event-card .time {
       font-weight: 700;
@@ -290,7 +310,9 @@
       margin-top: 8px;
     }
 
-    .event-card .button { margin-top: 20px; }
+    .event-card .button {
+      margin-top: 20px;
+    }
 
     .footer-note {
       text-align: center;
@@ -305,12 +327,23 @@
       padding: 28px 16px;
     }
 
-    footer span { color: #f0d79e; }
+    footer span {
+      color: #f0d79e;
+    }
 
     @media(max-width:700px) {
-      .event-list { grid-template-columns: 1fr; }
-      .countdown { gap: 7px; }
-      .timebox { padding: 16px 4px; }
+      .event-list {
+        grid-template-columns: 1fr;
+      }
+
+      .countdown {
+        gap: 7px;
+      }
+
+      .timebox {
+        padding: 16px 4px;
+      }
+
       .timebox span {
         letter-spacing: 0;
         font-size: .62rem;
@@ -321,7 +354,13 @@
 
 <body>
   <header class="hero" id="home">
-    <button class="language-switch" id="languageSwitch" type="button" aria-label="Switch language">العربية</button>
+    <button
+      class="language-switch"
+      id="languageSwitch"
+      type="button"
+      aria-label="Switch language"
+      title="Switch language"
+    >ع</button>
 
     <div class="hero-inner">
       <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
@@ -424,7 +463,7 @@
   </footer>
 
   <script>
-    // Countdown uses 6:00 PM Saudi Arabia time as an approximate time for "after Maghrib".
+    // Approximate Saudi Arabia time for "after Maghrib".
     const nikahDateTime = "2026-11-12T18:00:00+03:00";
     const weddingTime = new Date(nikahDateTime).getTime();
 
@@ -460,8 +499,7 @@
         withLove: "With love and duas,",
         footerPrayer: "May Allah bless these occasions and place barakah in this union.",
         countdownMessage: "We look forward to celebrating with you.",
-        countdownFinished: "The Nikah day has arrived. May Allah make it full of barakah!",
-        languageButton: "العربية"
+        countdownFinished: "The Nikah day has arrived. May Allah make it full of barakah!"
       },
 
       ar: {
@@ -493,8 +531,7 @@
         withLove: "مع خالص المحبة والدعوات،",
         footerPrayer: "نسأل الله أن يبارك هذه المناسبات، وأن يجعل هذا الزواج مباركًا.",
         countdownMessage: "نتطلع إلى الاحتفال معكم.",
-        countdownFinished: "لقد أقبل يوم عقد القران، نسأل الله أن يجعله يومًا مباركًا!",
-        languageButton: "English"
+        countdownFinished: "لقد أقبل يوم عقد القران، نسأل الله أن يجعله يومًا مباركًا!"
       }
     };
 
@@ -507,13 +544,18 @@
       document.querySelectorAll("[data-i18n]").forEach(element => {
         const key = element.getAttribute("data-i18n");
 
-        if (translations[language][key]) {
+        if (translations[language][key] !== undefined) {
           element.textContent = translations[language][key];
         }
       });
 
-      document.getElementById("languageSwitch").textContent =
-        translations[language].languageButton;
+      // Circular language button: Arabic Ayn in English mode, EN in Arabic mode.
+      const languageButton = document.getElementById("languageSwitch");
+      languageButton.textContent = language === "en" ? "ع" : "EN";
+      languageButton.setAttribute(
+        "aria-label",
+        language === "en" ? "Switch to Arabic" : "Switch to English"
+      );
 
       updateCountdown();
     }
