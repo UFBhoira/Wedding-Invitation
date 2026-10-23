@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b32">
+  <title>Ubaid &amp; Fatima | Wedding Invitation</title>
+  <meta name="description" content="You are warmly invited to the Nikah ceremony and Walimah dinner of Ubaid and Fatima in Jeddah.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #123b32;
+      --green2: #1c5143;
+      --gold: #c9a45c;
+      --cream: #fbf7ef;
+      --ink: #25342d;
+      --muted: #6e786f;
+      --white: #fffdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--cream); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    .hero {
+      min-height: 92vh; display: grid; place-items: center; text-align: center; padding: 58px 20px;
+      color: var(--white); position: relative; overflow: hidden;
+      background: linear-gradient(rgba(10,42,34,.83), rgba(10,42,34,.88)),
+      url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85") center/cover;
+    }
+    .hero::before, .hero::after { content: ""; position: absolute; width: 250px; height: 250px; border: 1px solid rgba(201,164,92,.55); transform: rotate(45deg); pointer-events: none; }
+    .hero::before { top: -150px; left: -100px; }
+    .hero::after { bottom: -160px; right: -100px; }
+    .hero-inner { max-width: 760px; position: relative; z-index: 1; }
+    .bismillah { font-family: "Amiri", serif; font-size: clamp(1.8rem,4vw,2.5rem); color: #f0d79e; margin: 0 0 22px; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .22em; font-size: .76rem; color: #e5d7b8; }
+    h1 { font-family: "Amiri", serif; font-weight: 400; font-size: clamp(3rem,9vw,6rem); line-height: 1.05; margin: 16px 0; }
+    .ampersand { color: var(--gold); font-style: italic; }
+    .hero p { max-width: 560px; margin: 18px auto; color: #f5eee0; }
+    .date-line { color: #f0d79e; letter-spacing: .12em; font-weight: 600; margin-top: 26px; }
+    .button { display: inline-block; border: 1px solid var(--gold); background: var(--gold); color: #152f27; text-decoration: none; padding: 12px 22px; border-radius: 3px; font-weight: 700; margin: 8px 5px; }
+    .button.outline { color: var(--white); background: transparent; }
+    section { padding: 70px 20px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-title { text-align: center; margin: 0 0 12px; font: 400 clamp(2.2rem,5vw,3.3rem)/1.15 "Amiri", serif; color: var(--green); }
+    .section-intro { text-align: center; max-width: 650px; margin: 0 auto 34px; color: var(--muted); }
+    .ornament { text-align: center; color: var(--gold); letter-spacing: .5em; margin: 12px 0 24px; }
+    .welcome { text-align: center; }
+    .welcome .arabic { font: 2rem "Amiri", serif; color: var(--green); }
+    .countdown-wrap { background: var(--green); color: var(--white); }
+    .countdown-wrap .section-title { color: var(--white); }
+    .countdown { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; max-width: 700px; margin: 30px auto 0; }
+    .timebox { border: 1px solid rgba(201,164,92,.65); padding: 22px 8px; text-align: center; }
+    .timebox strong { display: block; color: #f0d79e; font-size: clamp(1.7rem,5vw,2.7rem); line-height: 1.2; }
+    .timebox span { text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; }
+    .event-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+    .event-card { background: var(--white); border: 1px solid #e7decd; padding: 30px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .event-number { color: var(--gold); font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; }
+    .event-card h3 { font: 2rem "Amiri",serif; color: var(--green); margin: 8px 0; }
+    .event-card p { margin: 5px 0; }
+    .event-card .time { font-weight: 700; color: var(--green2); margin-top: 8px; }
+    .event-card .button { margin-top: 20px; }
+    .footer-note { text-align: center; color: var(--muted); margin-top: 28px; }
+    footer { text-align: center; background: var(--green); color: #f5eee0; padding: 28px 16px; }
+    footer span { color: #f0d79e; }
+    @media(max-width:700px) {
+      .event-list { grid-template-columns: 1fr; }
+      .countdown { gap: 7px; }
+      .timebox { padding: 16px 4px; }
+      .timebox span { letter-spacing: 0; font-size: .62rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <p class="bismillah" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <div class="eyebrow">Together with our families</div>
+      <h1><span>Ubaid Bhoira</span><br><span class="ampersand">&amp;</span><br><span>Fatima Bhoira</span></h1>
+      <p>With gratitude to Allah ﷻ, we warmly invite you to join us for our Nikah ceremony and Walimah dinner.</p>
+      <div class="date-line">12 &amp; 13 NOVEMBER 2026 · JEDDAH</div>
+      <a class="button" href="#events">View Event Details</a>
+    </div>
+  </header>
+
+  <section class="welcome">
+    <div class="section-inner">
+      <h2 class="section-title">A Blessed Beginning</h2>
+      <div class="ornament">✧ ❖ ✧</div>
+      <p class="arabic" lang="ar" dir="rtl">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</p>
+      <p class="section-intro">Your presence and duas will mean a great deal to us as we celebrate these special occasions. We look forward to sharing these blessed moments with you.</p>
+    </div>
+  </section>
+
+  <section class="countdown-wrap" aria-labelledby="countdown-title">
+    <div class="section-inner">
+      <h2 class="section-title" id="countdown-title">Until Our Celebrations</h2>
+      <p class="section-intro">Counting down to the Nikah ceremony</p>
+      <div class="countdown" aria-live="polite">
+        <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+        <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div>
+      <p id="countdownMessage" class="section-intro" style="margin-top:20px"></p>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="section-inner">
+      <h2 class="section-title">Wedding Events</h2>
+      <p class="section-intro">We would be honoured by your presence at both occasions.</p>
+      <div class="event-list">
+        <article class="event-card">
+          <div class="event-number">Event One</div>
+          <h3>Nikah Ceremony</h3>
+          <div class="ornament">✧</div>
+          <p><strong>Thursday, 12 November 2026</strong></p>
+          <p class="time">After Maghrib</p>
+          <p style="margin-top:16px"><strong lang="ar" dir="rtl">بيت الأخ فرحان</strong></p>
+          <p>4th Floor</p>
+          <a class="button" href="https://maps.app.goo.gl/RFKeMsNd4JpChu7p8?g_st=ac" target="_blank" rel="noopener">Open Nikah Location</a>
+        </article>
+        <article class="event-card">
+          <div class="event-number">Event Two</div>
+          <h3>Walimah Dinner</h3>
+          <div class="ornament">✧</div>
+          <p><strong>Friday, 13 November 2026</strong></p>
+          <p class="time">9:00 PM</p>
+          <p style="margin-top:16px"><strong>Sunday Hotel</strong></p>
+          <p>RE Floor, Ar-Rehab, Jeddah</p>
+          <a class="button" href="https://maps.app.goo.gl/vgd8pB4SVcrD37kt8?g_st=ac" target="_blank" rel="noopener">Open Walimah Location</a>
+        </article>
+      </div>
+      <p class="footer-note">Please use the map links above for directions to each venue.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>With love and duas, <span>Ubaid &amp; Fatima</span></p>
+    <p>May Allah bless these occasions and place barakah in this union.</p>
+  </footer>
+
+  <script>
+    // Countdown is set to 6:00 PM Saudi Arabia time as an approximate placeholder for "after Maghrib".
+    // Adjust the time if you want the countdown to use a more precise start time.
+    const nikahDateTime = "2026-11-12T18:00:00+03:00";
+    const weddingTime = new Date(nikahDateTime).getTime();
+
+    function updateCountdown() {
+      let distance = weddingTime - Date.now();
+      const message = document.getElementById("countdownMessage");
+
+      if (distance <= 0) {
+        ["days", "hours", "minutes", "seconds"].forEach(id => {
+          document.getElementById(id).textContent = "0";
+        });
+        message.textContent = "The Nikah day has arrived. May Allah make it full of barakah!";
+        return;
+      }
+
+      const days = Math.floor(distance / 86400000);
+      distance %= 86400000;
+      const hours = Math.floor(distance / 3600000);
+      distance %= 3600000;
+      const minutes = Math.floor(distance / 60000);
+      const seconds = Math.floor((distance % 60000) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+      message.textContent = "We look forward to celebrating with you.";
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
